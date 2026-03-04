@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+using namespace std;
 typedef int Item; 
 
 struct arv {
@@ -51,4 +52,17 @@ void destroi(Arv& A) {
     A = nullptr; 
 }
 
+void exibe_arvore(Arv A, int nivel = 0) {
+    if (A == nullptr) {
+        return;
+    }
+    exibe_arvore(A->dir, nivel + 1);
+
+    for (int i=0; i < nivel; i++) {
+        cout << "  ";
+    }
+    cout << A->item << endl;
+
+    exibe_arvore(A->esq, nivel + 1);
+}
 #endif
