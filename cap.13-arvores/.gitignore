@@ -1,4 +1,7 @@
-* .exe
-13.1
-13.2.exe
-* .o
+# Ignora a pasta de executáveis
+
+
+# Ignora objetos e executaveis soltos 
+*.exe
+*.o
+*.out
